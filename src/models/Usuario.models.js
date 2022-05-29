@@ -7,7 +7,9 @@ const Usuario = Schema({
     rol:String,
     password:String,
     Hoteles: [{type: Schema.ObjectId, ref: 'Hoteles'}],
+    Facturas:[{type: Schema.ObjectId, ref: 'Facturas'}],
     
+
     
 });
 
