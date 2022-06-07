@@ -73,8 +73,64 @@ function editarhabitacion(req,res){
 
    
 }
+function EliminarHabitaciones(req,res){
+    var habitacionId = req.params.idHabitacion;
+    var hotelId= req.params.hotelId;
+    
+    Hoteles.findById(hotelId,(err,hotelfinded)=>{
+        if(err){
+            return res.status(500).send({message:'error en la petcion 1'});
+        }else if (hotelfinded){
+            if(hotelfinded.habitaciones.includes(habitacionId)){
+                Hoteles.findByIdAndUpdate(hotelId,{$pull:{habitaciones:habitacionId}},{new:true},(err,hotelUpdated)=>{
+                    if(err){
+                        return res.status(500).send({message:'error en la peticon 2'});
+                    }else if(hotelUpdated){
+                        Habitaciones.findByIdAndRemove(habitacionId,(err,habitacionRemoved)=>{
+                            if(err){
+                                return res.status(500).send({message:'error en la peticion 3'});
+                            }else if(habitacionRemoved){
+                                return res.status(200).send({message:'habitacion eliminada y removida exitosamente',habitacionRemoved});
+                            }else{
+                                return res.status(500).send({message:'error al eliminar habitacion '});
+                            }
+                        })
+                    }else{
+                        return res.status(500).send({message:'error al remover la habitacion'})
+                    }
+                })
+            }else{
+                return res.status(500).send({message:'error la habitacion no existe o ya fue removida'})
+            }
+        }else{
+            return res.status(500).send({message:'error al encontrar el hotel'})
+        }
+    })
+
+}
+
+
+function ObtenerHabitaciones (req,res){
+    var Id = req.params.idHotel;
+
+    Hoteles.findById (Id,(err,hotelesfinded)=>{
+        if(err){
+            return res.status(500).send({message:'error en la peticion 1'});
+        }else if(hotelesfinded){
+            let a = hotelesfinded.habitaciones;
+            return res.status(200).send({message:'Hoteles', a});
+        }else{
+            return res.status(500).send({message:'no hay hoteles'})
+        }
+    }).populate('a');
+
+
+
+}
 
 module.exports={
     AgregarHabitaciones,
     editarhabitacion,
+    EliminarHabitaciones,
+    ObtenerHabitaciones
 }
