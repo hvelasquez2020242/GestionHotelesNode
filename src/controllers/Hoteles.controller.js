@@ -97,10 +97,43 @@ function ElimnarHotel(req,res){
     
 }
 
+function ObtenerHoteles (req,res){
+    var userId = req.user.sub;
+
+    Usuario.findById(userId,(err,hotelesfinded)=>{
+        if(err){
+            return res.status(500).send({message:'error en la peticion 1'});
+        }else if(hotelesfinded){
+            let hoteles = hotelesfinded.Hoteles;
+            return res.status(200).send({message:'Hoteles', hoteles});
+        }else{
+            return res.status(500).send({message:'no hay hoteles'})
+        }}).populate('Hoteles');
+
+
+
+}
+
+function ObtenerHotelesxId(req,res){
+    var hotelId = req.params.idHotel;
+
+    Hoteles.findById(hotelId,(err,hotelfinded)=>{
+        if(err){
+            return res.status(500).send({message:'error en la peticion1'});
+        }else if(hotelesfinded){
+            return res.status(200).send({message:'Hotel',hotelesfinded});
+        }else{
+            return res.status(500).send({message:'error al obtener los hoteles'})
+        }
+    })
+}
+
 
 
 module.exports={
     AgregarHoteles,
     EditarHoteles,
     ElimnarHotel,
+    ObtenerHoteles,
+    ObtenerHotelesxId
 }
