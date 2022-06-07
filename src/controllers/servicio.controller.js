@@ -3,7 +3,7 @@ const Servicio = require('../models/Servicios.model');
 
 function AgregarServicio(req,res){
     var params = req.body;
-    var ServicioModel = new Servicios();
+    var ServicioModel = new Servicio();
     var HabtacionId= req.params.IdHabitacion;
 
     if(params.nombreServicio && params.costoServicio){
@@ -16,7 +16,10 @@ function AgregarServicio(req,res){
                 Habitacion.findByIdAndUpdate(HabtacionId,{$push:{Servicios:ServicioCreado._id}},{new:true},(err,ServicioAgregado)=>{
                     if(err)return res.status(500).send({mensaje:'error al agregar el servicio 2'});
                     if(ServicioAgregado){
-                        
+                        return res.status(500).send({mensaje:'el servicio se a creado y agregado correctament'});
+
+                    }else{
+                        return res.status(500).send({mensaje:'erro al agregar el servicio'})
                     }
 
                 })
@@ -27,7 +30,29 @@ function AgregarServicio(req,res){
 
 
     }
+    
 
 
 
+}
+
+function editarServicio(req,res){
+    var servicioId = req.params.IdServicio;
+
+    Servicios.findByIdAndUpdate(servicioId,(err,servicioUpdated)=>{
+        if(err){
+            return res.status(500).send({mensaje:'error en la petiocion'});
+        }else if(serviciofinded){
+            return res.status(200).send({mensaje:'servicio Editado'},servicioUpdated);
+        }else{
+            return res.status(500).send({mensaje:'error al editar el servicio'});
+        }
+
+    })
+
+}
+
+module.exports ={
+    AgregarServicio,
+    editarServicio
 }
