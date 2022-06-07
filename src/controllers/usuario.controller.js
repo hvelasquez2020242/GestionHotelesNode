@@ -132,7 +132,7 @@ function registrarAdminHotel(req,res){//pendiente
                             if (err) {
                                 return res.status(500).send({message: "Error al agregar empresa"});
                             } else if (userSaved) {
-                               //pull a hoteles
+                               return res.status(200).send({message:'el adminHotel se creo correctamente',userSaved})
                             } else {
                                 return res.status(500).send({message: "No se agregó la empresa"});
                             }

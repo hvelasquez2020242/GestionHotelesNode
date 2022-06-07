@@ -5,7 +5,7 @@ const mdAuth = require("../middlewares/autenticated.middlewares");
 var api = express.Router();
 api.post("/login", userController.login);// login
 api.post("/RegistrarAdmin",[mdAuth.Auth, mdAuth.ensureAuthAdmin],userController.registrarAdmin);
-api.put("/RegistrarAdmin",[mdAuth.Auth, mdAuth.ensureAuthAdmin],userController.registrarAdminHotel);
+api.post("/RegistrarAdminHotel",[mdAuth.Auth, mdAuth.ensureAuthAdmin],userController.registrarAdminHotel);
 api.post("/registrarUsuario",userController.registrarUsuario);
 api.put("/EditarUsuario/:idUsuario",[mdAuth.Auth,mdAuth.ensureAuthUser],userController.editarUsuario)//necesita el ID del Usuario (faltan validadciones sobre el mismo {no necesarias})
 api.delete("/eliminarUsuario/:idUsuario",[mdAuth.Auth, mdAuth.ensureAuthUser],userController.eliminarUsuario);
