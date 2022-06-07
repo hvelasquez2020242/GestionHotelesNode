@@ -1,0 +1,440 @@
+{
+	"info": {
+		"_postman_id": "9db7b233-d212-4271-aa32-ef41e86bcf42",
+		"name": "GestionHoteles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "SuperAdmin",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "default"
+								},
+								{
+									"key": "getToken",
+									"value": "true",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "getToken",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AgregarAdmin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjllN2NlMTUxMGM5NDJjMzZiOTc3MGEiLCJub21icmUiOiJTdXBlckFkbWluIiwidXNlcm5hbWUiOiJTdXBlckFkbWluIiwicm9sIjoiUk9MX0FkbWluIiwiaWF0IjoxNjU0NTU0MTY3LCJleHAiOjE2NTUwNzI1Njd9.Kg_HRKIAMbnu1v3x3CDigmw8ecjXCWQxs_DT3AAkJfU",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "aa",
+									"type": "default"
+								},
+								{
+									"key": "username",
+									"value": "a20",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/RegistrarAdmin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"RegistrarAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AgregarUsuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjllN2NlMTUxMGM5NDJjMzZiOTc3MGEiLCJub21icmUiOiJTdXBlckFkbWluIiwidXNlcm5hbWUiOiJTdXBlckFkbWluIiwicm9sIjoiUk9MX0FkbWluIiwiaWF0IjoxNjU0NTU0MTY3LCJleHAiOjE2NTUwNzI1Njd9.Kg_HRKIAMbnu1v3x3CDigmw8ecjXCWQxs_DT3AAkJfU",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "javier",
+									"type": "default"
+								},
+								{
+									"key": "username",
+									"value": "jivilp",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/registrarUsuario",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"registrarUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AgregarAdminHotel",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjllN2NlMTUxMGM5NDJjMzZiOTc3MGEiLCJub21icmUiOiJTdXBlckFkbWluIiwidXNlcm5hbWUiOiJTdXBlckFkbWluIiwicm9sIjoiUk9MX0FkbWluIiwiaWF0IjoxNjU0NTcwNzM1LCJleHAiOjE2NTUwODkxMzV9.6KLLuJHT8YAbeEJOKMO4gTKf5ELLh85qljDsRgWTXq0",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "jiji",
+									"type": "default"
+								},
+								{
+									"key": "username",
+									"value": "@a",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "741",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/RegistrarAdminHotel",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"RegistrarAdminHotel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Usuario",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjllOGViOTA5YmJmM2Q1MmI2YWE3NzIiLCJub21icmUiOiJqYXZpZXIiLCJ1c2VybmFtZSI6ImppdmlscCIsInJvbCI6IlJPTF9Vc3VhcmlvIiwiaWF0IjoxNjU0NTU4NDA0LCJleHAiOjE2NTUwNzY4MDR9.yebdUIX_05Ti_nhhXCZryPLscBrz7NyTrdo1JJpYFe4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "sergio",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "jivilp",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/EditarUsuario/629e8eb909bbf3d52b6aa772",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"EditarUsuario",
+								"629e8eb909bbf3d52b6aa772"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjllOGViOTA5YmJmM2Q1MmI2YWE3NzIiLCJub21icmUiOiJqYXZpZXIiLCJ1c2VybmFtZSI6ImppdmlscCIsInJvbCI6IlJPTF9Vc3VhcmlvIiwiaWF0IjoxNjU0NTU4NDA0LCJleHAiOjE2NTUwNzY4MDR9.yebdUIX_05Ti_nhhXCZryPLscBrz7NyTrdo1JJpYFe4",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/eliminarUsuario/629e8eb909bbf3d52b6aa772",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eliminarUsuario",
+								"629e8eb909bbf3d52b6aa772"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener usuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjllN2NlMTUxMGM5NDJjMzZiOTc3MGEiLCJub21icmUiOiJTdXBlckFkbWluIiwidXNlcm5hbWUiOiJTdXBlckFkbWluIiwicm9sIjoiUk9MX0FkbWluIiwiaWF0IjoxNjU0NTY2ODAxLCJleHAiOjE2NTUwODUyMDF9.RquLJJQpAD8yjSNBjiLcnFS6mZwjA16rAZ3o1hyreus",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3000/api/obtenerUsuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"obtenerUsuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Usuarios x ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjllN2NlMTUxMGM5NDJjMzZiOTc3MGEiLCJub21icmUiOiJTdXBlckFkbWluIiwidXNlcm5hbWUiOiJTdXBlckFkbWluIiwicm9sIjoiUk9MX0FkbWluIiwiaWF0IjoxNjU0NTY2ODAxLCJleHAiOjE2NTUwODUyMDF9.RquLJJQpAD8yjSNBjiLcnFS6mZwjA16rAZ3o1hyreus",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/obtenerUsuariosXid/629eb02aabe27d637f745393",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"obtenerUsuariosXid",
+								"629eb02aabe27d637f745393"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hoteles",
+			"item": [
+				{
+					"name": "Agregar Hoteles",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjllYmVmZGY5YjA1MjVmZjg3OWYyOTYiLCJ1c2VybmFtZSI6IkBhIiwicm9sIjoiUk9MX0FkbWluSG90ZWwiLCJpYXQiOjE2NTQ1NzE1MjMsImV4cCI6MTY1NTA4OTkyM30.nUVd60T0JKPwhBaIHRipaB8HqGD4qlMH1pjGbE-_rS8",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "NombreHotel",
+									"value": "Monte real",
+									"type": "default"
+								},
+								{
+									"key": "direccionHotel",
+									"value": "primera calle a",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/agregarhotel",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"agregarhotel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Hoteles",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjllYmVmZGY5YjA1MjVmZjg3OWYyOTYiLCJ1c2VybmFtZSI6IkBhIiwicm9sIjoiUk9MX0FkbWluSG90ZWwiLCJpYXQiOjE2NTQ1NzE1MjMsImV4cCI6MTY1NTA4OTkyM30.nUVd60T0JKPwhBaIHRipaB8HqGD4qlMH1pjGbE-_rS8",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "NombreHotel",
+									"value": "Monte faaaa",
+									"type": "default"
+								},
+								{
+									"key": "direccionHotel",
+									"value": "primera calle a",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/editarHotel/629ec2f79859c60bc5a693be",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"editarHotel",
+								"629ec2f79859c60bc5a693be"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Hotel",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Obtner Hoteles",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
