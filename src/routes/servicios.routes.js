@@ -9,4 +9,7 @@ var api = express.Router();
 api.put("/agregarServicio/:IdHabitacion",[mdAuth.Auth, mdAuth.ensureAuthAdminHotel]
 ,servicioController.AgregarServicio)//necesita el ID de la Habitcion;
 
-api.put("/editarServicio/:IdServicio",[mdAuth.Auth, mdAuth.ensureAuthAdminHotel],servicioController.editarServicio)
+api.put("/editarServicio/:IdServicio",[mdAuth.Auth, mdAuth.ensureAuthAdminHotel],
+servicioController.editarServicio)//necesita el Id del Servicio
+
+module.exports = api
