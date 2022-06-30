@@ -9,62 +9,6 @@
 			"name": "Usuario",
 			"item": [
 				{
-					"name": "Login",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "username",
-									"value": "SuperAdmin",
-									"type": "default"
-								},
-								{
-									"key": "password",
-									"value": "123456",
-									"type": "default"
-								},
-								{
-									"key": "getToken",
-									"value": "true",
-									"type": "default"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:3000/api/login",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"login"
-							],
-							"query": [
-								{
-									"key": "username",
-									"value": "",
-									"disabled": true
-								},
-								{
-									"key": "password",
-									"value": null,
-									"disabled": true
-								},
-								{
-									"key": "getToken",
-									"value": null,
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "AgregarAdmin",
 					"request": {
 						"method": "POST",
@@ -435,6 +379,181 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "habitaciones",
+			"item": [
+				{
+					"name": "Agregar Habitaciones",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjllYmVmZGY5YjA1MjVmZjg3OWYyOTYiLCJ1c2VybmFtZSI6IkBhIiwicm9sIjoiUk9MX0FkbWluSG90ZWwiLCJpYXQiOjE2NTQ1NzE1MjMsImV4cCI6MTY1NTA4OTkyM30.nUVd60T0JKPwhBaIHRipaB8HqGD4qlMH1pjGbE-_rS8",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "NumeroHabitacion",
+									"value": "4569",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/agregarHabitacion/629ee721ef7e059f88dde096",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"agregarHabitacion",
+								"629ee721ef7e059f88dde096"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar habitaciones",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjllYmVmZGY5YjA1MjVmZjg3OWYyOTYiLCJ1c2VybmFtZSI6IkBhIiwicm9sIjoiUk9MX0FkbWluSG90ZWwiLCJpYXQiOjE2NTQ1NzE1MjMsImV4cCI6MTY1NTA4OTkyM30.nUVd60T0JKPwhBaIHRipaB8HqGD4qlMH1pjGbE-_rS8",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "NumeroHabitacion",
+									"value": "789",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/editarhabitacion/629efa5f6a02f7e1fed01e9e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"editarhabitacion",
+								"629efa5f6a02f7e1fed01e9e"
+							],
+							"query": [
+								{
+									"key": "NumeroHabitacion",
+									"value": "9",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eiiminar habitaciones",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjllYmVmZGY5YjA1MjVmZjg3OWYyOTYiLCJ1c2VybmFtZSI6IkBhIiwicm9sIjoiUk9MX0FkbWluSG90ZWwiLCJpYXQiOjE2NTQ1NzE1MjMsImV4cCI6MTY1NTA4OTkyM30.nUVd60T0JKPwhBaIHRipaB8HqGD4qlMH1pjGbE-_rS8",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/eliminarHabitacion/629ee721ef7e059f88dde096/629f11a2a5404a2872b954e3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eliminarHabitacion",
+								"629ee721ef7e059f88dde096",
+								"629f11a2a5404a2872b954e3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "SuperAdmin",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "default"
+						},
+						{
+							"key": "getToken",
+							"value": "true",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "getToken",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

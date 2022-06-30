@@ -110,21 +110,21 @@ function EliminarHabitaciones(req,res){
 }
 
 
-function ObtenerHabitaciones (req,res){
-    var Id = req.params.idHotel;
+function ObtenerHabitaciones(req,res){
+    var hotelId= req.params.idHotel;
 
-    Hoteles.findById (Id,(err,hotelesfinded)=>{
+    Hoteles.findById(hotelId,((err,hotelfinded)=>{
         if(err){
-            return res.status(500).send({message:'error en la peticion 1'});
-        }else if(hotelesfinded){
-            let a = hotelesfinded.habitaciones;
-            return res.status(200).send({message:'Hoteles', a});
+            return console.log(hotelfinded);
+        }else if (hotelfinded){
+            let habitaciones = hotelfinded.habitaciones;
+            return res.status(200).send({message:'habitaciones',habitaciones})
         }else{
-            return res.status(500).send({message:'no hay hoteles'})
+            
+            return res.status(500).send({message:'no hay habitaciones',})
         }
-    }).populate('a');
 
-
+    })).populate('habitaciones');
 
 }
 

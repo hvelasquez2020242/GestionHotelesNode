@@ -108,7 +108,8 @@ function ObtenerHoteles (req,res){
             return res.status(200).send({message:'Hoteles', hoteles});
         }else{
             return res.status(500).send({message:'no hay hoteles'})
-        }}).populate('Hoteles');
+        }
+    }).populate('Hoteles');
 
 
 
