@@ -129,6 +129,23 @@ function ObtenerHotelesxId(req,res){
     })
 }
 
+function ObtenerHotelesxNombre (req,res){
+    var nombreHotel= req.body.NombreHotel;
+
+
+    Hoteles.findOne({ NombreHotel: nombreHotel},(err,hotelfinded)=>{
+        if(err){
+            return res.status(500).send({message:'error en la peticion'});
+
+        }else if(hotelfinded){
+            return res.status(200).send({message:'hotel',hotelfinded})
+        }else{
+            return res.status(500).send({message:'error al obtener el hotel'});
+        }
+
+    })
+}
+
 
 
 module.exports={
@@ -136,5 +153,6 @@ module.exports={
     EditarHoteles,
     ElimnarHotel,
     ObtenerHoteles,
-    ObtenerHotelesxId
+    ObtenerHotelesxId,
+    ObtenerHotelesxNombre
 }

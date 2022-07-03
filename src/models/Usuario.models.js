@@ -9,6 +9,7 @@ const Usuario = Schema({
     Hoteles: [{type: Schema.ObjectId, ref: 'Hoteles'}],
     habitacion:[{type: Schema.ObjectId, ref: 'habitacion'}],
     Facturas:[{type: Schema.ObjectId, ref: 'Facturas'}],
+    Cuenta:[{type: Schema.ObjectId, ref: 'Cuenta'}],
     
 
     
