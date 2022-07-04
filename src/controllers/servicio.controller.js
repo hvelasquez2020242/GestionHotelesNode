@@ -1,5 +1,6 @@
 const Habitacion = require('../models/Habitaciones.model');
 const Servicio = require('../models/Servicios.model');
+const Cuenta = require('../models/cuenta.model')
 
 function AgregarServicio(req,res){
     var params = req.body;
@@ -13,6 +14,9 @@ function AgregarServicio(req,res){
         ServicioModel.save((err,ServicioCreado)=>{
             if(err)return res.status(500).send({mensaje:'error en la peticion 1'});
             if(ServicioCreado){
+                Cuenta.findOne({Habitacion:habitacionId})
+
+
                 Habitacion.findByIdAndUpdate(HabtacionId,{$push:{Servicios:ServicioCreado._id}},{new:true},(err,ServicioAgregado)=>{
                     if(err)return res.status(500).send({mensaje:'error al agregar el servicio 2'});
                     if(ServicioAgregado){

@@ -121,8 +121,8 @@ function ObtenerHotelesxId(req,res){
     Hoteles.findById(hotelId,(err,hotelfinded)=>{
         if(err){
             return res.status(500).send({message:'error en la peticion1'});
-        }else if(hotelesfinded){
-            return res.status(200).send({message:'Hotel',hotelesfinded});
+        }else if(hotelfinded){
+            return res.status(200).send({message:'Hotel',hotelfinded});
         }else{
             return res.status(500).send({message:'error al obtener los hoteles'})
         }
