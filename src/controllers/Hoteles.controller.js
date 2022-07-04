@@ -21,7 +21,7 @@ function AgregarHoteles(req,res){
                             if(err){
                                 return res.status(500).send({message:'error en la peticion 2'})
                             }else if(hotelAgregado){
-                                return res.status(500).send({mensaje:'el hotel se creo y se agreco exitosamente',HotelSaved});
+                                return res.status(200).send({mensaje:'el hotel se creo y se agreco exitosamente',HotelSaved});
 
 
                             }else{
