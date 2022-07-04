@@ -365,16 +365,122 @@
 				{
 					"name": "Eliminar Hotel",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjllYmVmZGY5YjA1MjVmZjg3OWYyOTYiLCJ1c2VybmFtZSI6IkBhIiwicm9sIjoiUk9MX0FkbWluSG90ZWwiLCJpYXQiOjE2NTQ1NzE1MjMsImV4cCI6MTY1NTA4OTkyM30.nUVd60T0JKPwhBaIHRipaB8HqGD4qlMH1pjGbE-_rS8",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/eliminarHoteles/629ec2f79859c60bc5a693be",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eliminarHoteles",
+								"629ec2f79859c60bc5a693be"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Obtner Hoteles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjllYmVmZGY5YjA1MjVmZjg3OWYyOTYiLCJ1c2VybmFtZSI6IkBhIiwicm9sIjoiUk9MX0FkbWluSG90ZWwiLCJpYXQiOjE2NTQ1NzE1MjMsImV4cCI6MTY1NTA4OTkyM30.nUVd60T0JKPwhBaIHRipaB8HqGD4qlMH1pjGbE-_rS8",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3000/api/obtenerHoteles",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"obtenerHoteles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerxNombre",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjllYmVmZGY5YjA1MjVmZjg3OWYyOTYiLCJ1c2VybmFtZSI6IkBhIiwicm9sIjoiUk9MX0FkbWluSG90ZWwiLCJpYXQiOjE2NTY4MDk5MDAsImV4cCI6MTY1Njg5NjMwMH0.UpDL0zkmvDz5zx0oodOY46opFalBskGQUj77Xrn1gTE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "NombreHotel",
+									"value": "Monte real",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/obtenerHotelesxNombre",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"obtenerHotelesxNombre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obterhotelsx id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjllYmVmZGY5YjA1MjVmZjg3OWYyOTYiLCJ1c2VybmFtZSI6IkBhIiwicm9sIjoiUk9MX0FkbWluSG90ZWwiLCJpYXQiOjE2NTY4Njk2MzQsImV4cCI6MTY1NzQ3NDQzNH0.iK7gppYhCMrcHHzW9JY3jum3MHsfSzdh9UVsdNstwTM\"",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/obtenerHotelesxId/629ee721ef7e059f88dde096",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"obtenerHotelesxId",
+								"629ee721ef7e059f88dde096"
+							]
+						}
 					},
 					"response": []
 				}
@@ -390,7 +496,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjllYmVmZGY5YjA1MjVmZjg3OWYyOTYiLCJ1c2VybmFtZSI6IkBhIiwicm9sIjoiUk9MX0FkbWluSG90ZWwiLCJpYXQiOjE2NTQ1NzE1MjMsImV4cCI6MTY1NTA4OTkyM30.nUVd60T0JKPwhBaIHRipaB8HqGD4qlMH1pjGbE-_rS8",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjllYmVmZGY5YjA1MjVmZjg3OWYyOTYiLCJ1c2VybmFtZSI6IkBhIiwicm9sIjoiUk9MX0FkbWluSG90ZWwiLCJpYXQiOjE2NTY4Njk2MzQsImV4cCI6MTY1NzQ3NDQzNH0.iK7gppYhCMrcHHzW9JY3jum3MHsfSzdh9UVsdNstwTM\"",
 								"type": "default"
 							}
 						],
@@ -399,7 +505,12 @@
 							"urlencoded": [
 								{
 									"key": "NumeroHabitacion",
-									"value": "4569",
+									"value": "66",
+									"type": "default"
+								},
+								{
+									"key": "PrecioHabitacion",
+									"value": "88",
 									"type": "default"
 								}
 							]
@@ -493,7 +604,72 @@
 					"name": "New Request",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjllYmVmZGY5YjA1MjVmZjg3OWYyOTYiLCJ1c2VybmFtZSI6IkBhIiwicm9sIjoiUk9MX0FkbWluSG90ZWwiLCJpYXQiOjE2NTQ1NzE1MjMsImV4cCI6MTY1NTA4OTkyM30.nUVd60T0JKPwhBaIHRipaB8HqGD4qlMH1pjGbE-_rS8",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/obtenerHabitaciones/629ee721ef7e059f88dde096",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"obtenerHabitaciones",
+								"629ee721ef7e059f88dde096"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reservacion",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MmMyOTk4M2I1M2ZmYjY1MzU1MTEzNTkiLCJub21icmUiOiJQcnVlYmEiLCJ1c2VybmFtZSI6IlBydWViYSIsInJvbCI6IlJPTF9Vc3VhcmlvIiwiaWF0IjoxNjU2OTIwNDc3LCJleHAiOjE2NTc0Mzg4Nzd9.rJrni3MP35vfE7yy-Zk7YHBP9CEuvyWeJg6KDAopQmQ",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "numeroDias",
+									"value": "15",
+									"type": "default"
+								},
+								{
+									"key": "estado",
+									"value": "false",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/AgregarReservacion/629ee721ef7e059f88dde096/62c2acfa7f3ee373ddd2c67b",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"AgregarReservacion",
+								"629ee721ef7e059f88dde096",
+								"62c2acfa7f3ee373ddd2c67b"
+							]
+						}
 					},
 					"response": []
 				}
@@ -509,12 +685,12 @@
 					"urlencoded": [
 						{
 							"key": "username",
-							"value": "SuperAdmin",
+							"value": "Prueba",
 							"type": "default"
 						},
 						{
 							"key": "password",
-							"value": "123456",
+							"value": "741",
 							"type": "default"
 						},
 						{
