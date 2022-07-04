@@ -3,6 +3,7 @@ const bcrypt = require("bcrypt-nodejs");
 const jwt = require("../services/jwt");
 
 const Usuario = require("../models/Usuario.models");
+const Cuenta = require("../models/cuenta.model")
 
 function adminDefult() {
     var UsuarioModel = new Usuario();
@@ -172,7 +173,19 @@ function registrarUsuario(req,res){
                             if (err) {
                                 return res.status(500).send({message: "Error al agregar empresa"});
                             } else if (userSaved) {
-                               return res.status(500).send({message:'se registro correctamente',userSaved})
+                               var cuentaModel = new Cuenta();
+                                    cuentaModel.usuario = userSaved._id ;
+                                    
+                                    cuentaModel.subtotal= 0;
+                                 cuentaModel.save((err,cuentaSaved)=>{
+                                    if(err){
+                                        return res.status(500).send({message:'error en la peticion 2'});
+
+                                    }else if (cuentaSaved){
+                                        return res.status(200).send({message:'usuario Y cuenta creada',userSaved})
+                                    }
+                                 })   
+
                             } else {
                                 return res.status(500).send({message: "No se agregó la empresa"});
                             }

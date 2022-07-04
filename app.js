@@ -7,7 +7,7 @@ const Usuario = require('./src/routes/usuario.routes');
 const Hoteles = require('./src/routes/Hoteles.routes');
 const Habitaciones = require('./src/routes/habitaciones.routes');
 const Servicios = require('./src/routes/servicios.routes');
-
+const Reservacion = require('./src/routes/reservacion.routes')
 
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
@@ -15,6 +15,6 @@ app.use(express.json());
 
 app.use(cors());
 
-app.use('/api',Usuario,Hoteles,Habitaciones,Servicios);
+app.use('/api',Usuario,Hoteles,Habitaciones,Servicios,Reservacion);
 
 module.exports = app;

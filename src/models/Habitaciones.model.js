@@ -6,6 +6,7 @@ const Habitaciones = Schema({
     Servicios: [{type: Schema.ObjectId, ref: 'Servicios'}],
     estado: Boolean,
     numeroDias: Number,
+    PrecioHabitacion: Number,
 
 });
 

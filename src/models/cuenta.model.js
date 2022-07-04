@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const Cuenta = Schema({
     usuario :  {type: Schema.ObjectId, ref: 'Usuario'},
-    habitacione:[{type: Schema.ObjectId, ref: 'Habitaciones'}],
+    habitaciones:[{type: Schema.ObjectId, ref: 'Habitaciones'}],
     subtotal: Number
     
 });

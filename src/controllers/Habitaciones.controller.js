@@ -16,6 +16,8 @@ function AgregarHabitaciones(req,res){
             }else if(!habitacionFineded){
                 habitacioModel.NumeroHabitacion = params.NumeroHabitacion;
                 habitacioModel.estado = true ;
+                habitacioModel.numeroDias= 0;
+                habitacioModel.PrecioHabitacion = params.PrecioHabitacion
                 habitacioModel.save((err,habitacionSaved)=>{
                     if(err){
                         return res.status(500).send({message:'error en la peticion 2'});
