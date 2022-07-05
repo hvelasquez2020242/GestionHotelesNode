@@ -3,7 +3,9 @@ const Schema = mongoose.Schema;
 
 const Factura = Schema({
     
-    subtotal: Number,
+    costoReservacion:Number,
+    subtotal: Number
+
     
     
 
